@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+    <title>Sudoku</title>
+</head>
+
+<body>
+    <div id="page-one">
+        <br>
+        <br>
+        <br>
+        <span id="logo-name">Space Sudoku</span>
+        <br>
+        <span><img id="spacshipe" src="./images/חללית עגולה.png" alt="knife"></span>
+        <br>
+        <span><img id="WALL-E" src="./images/wall-e-removebg-preview.png" alt="WALL-E"></span>
+
+        <br>
+        <div>
+            <input id="username-input" type="text" placeholder="Enter Username" name="uname" required>
+            <br> <input id="password-input" type="password" placeholder="Enter Password" name="psw" required>
+            <div id="error-div-one"></div>
+            <button id="login-btn" type="submit">Login</button>
+
+            <br>
+        </div>
+
+    </div>
+
+    <div id="page-two">
+
+        <div id="welcomePageTwo"><span id="welcomePageTwoSpan"></span>
+            <span> <button class="logOutBtn">Logout</button> </span>
+        </div>
+        <div id="game-rules">
+            <h2 id="rules">Game Rules </h2>
+            The game involves a grid of 81 squares. <br> The grid is divided into nine blocks. <br> Each of the nine blocks has to contain all the numbers 1-9 within its squares.
+            <br> Each number can only appear once in a row, column or box. <br> Every puzzle has just one correct solution.
+        </div>
+        <h3 id="choose-difficulty">Choose difficulty</h3>
+        <button id="btnEasy" class="levelsBtn">Easy</button>
+        <button id="btnMedium" class="levelsBtn">Medium</button>
+        <button id="btnHard" class="levelsBtn">Hard</button>
+        <button id="btnInsane" class="levelsBtn">Insane</button>
+        <br>
+        <span><img id="shadow-ET" src="./images/ET-removebg-preview.png" alt="shadow-ET"></span>
+    </div>
+    <div id="page-three">
+        <div class="pyro">
+            <div class="before"></div>
+            <div class="after"></div>
+
+            <div id="header-page-three">Drag and drop the numbers to the board</div>
+            <span><img id="little-ship" src="./images/חללית עגולה.png" alt="knife"></span>
+            <div id="numbers-div">
+
+                <span style="font-size:1em;" id="1" draggable="true" ondragstart="drag(event)" value="1">1</span
+                    style="color:blue;">
+                <span style="font-size:1em; " id="2" draggable="true" ondragstart="drag(event)" value="2">2</span>
+                <span style="font-size:1em; " id="3" draggable="true" ondragstart="drag(event)" value="3">3</span>
+                <span style="font-size:1em; " id="4" draggable="true" ondragstart="drag(event)" value="4">4</span>
+                <span style="font-size:1em;" id="5" draggable="true" ondragstart="drag(event)" value="5">5</span>
+                <span style="font-size:1em;" id="6" draggable="true" ondragstart="drag(event)" value="6">6</span>
+                <span style="font-size:1em; " id="7" draggable="true" ondragstart="drag(event)" value="7">7</span>
+                <span style="font-size:1em;" id="8" draggable="true" ondragstart="drag(event)" value="8">8</span>
+                <span style="font-size:1em;" id="9" draggable="true" ondragstart="drag(event)" value="9">9</span>
+
+            </div>
+            <span><img id="little-ship" src="./images/חללית עגולה.png" alt="knife"></span>
+            <table id="sudokuTable">
+                <tbody>
+                    <tr>
+                        <td class="cell" id="cell[0][0]"></td>
+                        <td class="cell" id="cell[0][1]"></td>
+                        <td class="cell" id="cell[0][2]"></td>
+                        <td class="cell" id="cell[0][3]"></td>
+                        <td class="cell" id="cell[0][4]"></td>
+                        <td class="cell" id="cell[0][5]"></td>
+                        <td class="cell" id="cell[0][6]"></td>
+                        <td class="cell" id="cell[0][7]"></td>
+                        <td class="cell" id="cell[0][8]"></td>
+                    </tr>
+                    <tr>
+                        <td class="cell" id="cell[1][0]"></td>
+                        <td class="cell" id="cell[1][1]"></td>
+                        <td class="cell" id="cell[1][2]"></td>
+                        <td class="cell" id="cell[1][3]"></td>
+                        <td class="cell" id="cell[1][4]"></td>
+                        <td class="cell" id="cell[1][5]"></td>
+                        <td class="cell" id="cell[1][6]"></td>
+                        <td class="cell" id="cell[1][7]"></td>
+                        <td class="cell" id="cell[1][8]"></td>
+                    </tr>
+                    <tr>
+                        <td class="cell" id="cell[2][0]"></td>
+                        <td class="cell" id="cell[2][1]"></td>
+                        <td class="cell" id="cell[2][2]"></td>
+                        <td class="cell" id="cell[2][3]"></td>
+                        <td class="cell" id="cell[2][4]"></td>
+                        <td class="cell" id="cell[2][5]"></td>
+                        <td class="cell" id="cell[2][6]"></td>
+                        <td class="cell" id="cell[2][7]"></td>
+                        <td class="cell" id="cell[2][8]"></td>
+                    </tr>
+                    <tr>
+                        <td class="cell" id="cell[3][0]"></td>
+                        <td class="cell" id="cell[3][1]"></td>
+                        <td class="cell" id="cell[3][2]"></td>
+                        <td class="cell" id="cell[3][3]"></td>
+                        <td class="cell" id="cell[3][4]"></td>
+                        <td class="cell" id="cell[3][5]"></td>
+                        <td class="cell" id="cell[3][6]"></td>
+                        <td class="cell" id="cell[3][7]"></td>
+                        <td class="cell" id="cell[3][8]"></td>
+                    </tr>
+                    <tr>
+                        <td class="cell" id="cell[4][0]"></td>
+                        <td class="cell" id="cell[4][1]"></td>
+                        <td class="cell" id="cell[4][2]"></td>
+                        <td class="cell" id="cell[4][3]"></td>
+                        <td class="cell" id="cell[4][4]"></td>
+                        <td class="cell" id="cell[4][5]"></td>
+                        <td class="cell" id="cell[4][6]"></td>
+                        <td class="cell" id="cell[4][7]"></td>
+                        <td class="cell" id="cell[4][8]"></td>
+                    </tr>
+                    <tr>
+                        <td class="cell" id="cell[5][0]"></td>
+                        <td class="cell" id="cell[5][1]"></td>
+                        <td class="cell" id="cell[5][2]"></td>
+                        <td class="cell" id="cell[5][3]"></td>
+                        <td class="cell" id="cell[5][4]"></td>
+                        <td class="cell" id="cell[5][5]"></td>
+                        <td class="cell" id="cell[5][6]"></td>
+                        <td class="cell" id="cell[5][7]"></td>
+                        <td class="cell" id="cell[5][8]"></td>
+                    </tr>
+                    <tr>
+                        <td class="cell" id="cell[6][0]"></td>
+                        <td class="cell" id="cell[6][1]"></td>
+                        <td class="cell" id="cell[6][2]"></td>
+                        <td class="cell" id="cell[6][3]"></td>
+                        <td class="cell" id="cell[6][4]"></td>
+                        <td class="cell" id="cell[6][5]"></td>
+                        <td class="cell" id="cell[6][6]"></td>
+                        <td class="cell" id="cell[6][7]"></td>
+                        <td class="cell" id="cell[6][8]"></td>
+                    </tr>
+                    <tr>
+                        <td class="cell" id="cell[7][0]"></td>
+                        <td class="cell" id="cell[7][1]"></td>
+                        <td class="cell" id="cell[7][2]"></td>
+                        <td class="cell" id="cell[7][3]"></td>
+                        <td class="cell" id="cell[7][4]"></td>
+                        <td class="cell" id="cell[7][5]"></td>
+                        <td class="cell" id="cell[7][6]"></td>
+                        <td class="cell" id="cell[7][7]"></td>
+                        <td class="cell" id="cell[7][8]"></td>
+                    </tr>
+                    <tr>
+                        <td class="cell" id="cell[8][0]"></td>
+                        <td class="cell" id="cell[8][1]"></td>
+                        <td class="cell" id="cell[8][2]"></td>
+                        <td class="cell" id="cell[8][3]"></td>
+                        <td class="cell" id="cell[8][4]"></td>
+                        <td class="cell" id="cell[8][5]"></td>
+                        <td class="cell" id="cell[8][6]"></td>
+                        <td class="cell" id="cell[8][7]"></td>
+                        <td class="cell" id="cell[8][8]"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="page-3-btns" id="switch-level">Change Level</button>
+            <button class="page-3-btns" id="reset-button">Reset</button>
+            <button class="page-3-btns" id="finish-button">Finish</button>
+
+            <div id="you-lose-div">
+
+                <p id="lose-para">You Lose</p>
+                <span><img id="lose-wallE" src="./images/wall-e-sad-removebg-preview.png" alt="ninja"></span>
+                <br>
+                <button id="btn-loser" onclick="tryAgain()">Try again</button>
+            </div>
+            <div id="you-win-div">
+                <p id="win-para">You Won !</p>
+                <span><img id="win-wallE" src="./images/WALL-e_-WIN-removebg-preview.png" alt="ninja"></span>
+                <br>
+                <button id="btn-winner" onclick=swichLevel();>Play Again</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+
+</html>
