@@ -1,5 +1,5 @@
 
-# Space-Sudoku-2020
+# Space Sudoku 2020
 # Description
 I created the project on the basis of 3 pages managed by the "background view" 
 function and in fact by switching between the pages it activates the desired page and
